@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Stacks",
+  "version": "1.0.0",
+  "description": "Vivaldi-style tab stacks: every tab group takes a single slot in the tab bar.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabstacks@bassepeder",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
+  "permissions": ["tabs", "tabHide", "tabGroups", "storage", "menus"],
+  "background": { "scripts": ["shared.js", "background.js"] },
+  "icons": { "48": "icons/stacks.svg", "96": "icons/stacks.svg" },
+  "action": {
+    "default_title": "Tab Stacks",
+    "default_popup": "popup/popup.html",
+    "default_area": "navbar",
+    "default_icon": "icons/toolbar-dark.svg",
+    "theme_icons": [
+      { "light": "icons/toolbar-light.svg", "dark": "icons/toolbar-dark.svg", "size": 16 },
+      { "light": "icons/toolbar-light.svg", "dark": "icons/toolbar-dark.svg", "size": 32 }
+    ]
+  },
+  "options_ui": { "page": "options/options.html" },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+Space", "mac": "MacCtrl+Shift+Space" },
+      "description": "Open the stack switcher"
+    },
+    "next-in-stack": {
+      "suggested_key": { "default": "Alt+Shift+Period", "mac": "MacCtrl+Shift+Period" },
+      "description": "Next tab in stack"
+    },
+    "prev-in-stack": {
+      "suggested_key": { "default": "Alt+Shift+Comma", "mac": "MacCtrl+Shift+Comma" },
+      "description": "Previous tab in stack"
+    },
+    "stack-selected": {
+      "suggested_key": { "default": "Alt+Shift+S", "mac": "MacCtrl+Shift+S" },
+      "description": "Stack selected tabs"
+    },
+    "toggle-expand": {
+      "suggested_key": { "default": "Alt+Shift+E", "mac": "MacCtrl+Shift+E" },
+      "description": "Expand or collapse the current stack"
+    },
+    "remove-from-stack": {
+      "suggested_key": { "default": "Alt+Shift+X", "mac": "MacCtrl+Shift+X" },
+      "description": "Remove current tab from its stack"
+    }
+  }
+}
