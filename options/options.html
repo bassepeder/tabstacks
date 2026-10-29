@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../theme.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <form id="settings">
+      <fieldset>
+        <legend>Stacks</legend>
+        <label class="check">
+          <input type="checkbox" name="showCounter" />
+          <span><strong>Show the position in the stack label</strong><small>The label reads “Docs · 2/5”, or “Docs · all 5” while expanded.</small></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" name="focusStackOnClose" />
+          <span><strong>Closing a stacked tab shows the next tab in that stack</strong><small>Otherwise Firefox picks a tab outside the stack.</small></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" name="dissolveSingles" />
+          <span><strong>Dissolve a stack when only one tab is left</strong><small>Like Vivaldi. Groups you create with a single tab are left alone.</small></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" name="autoCollapse" />
+          <span><strong>Fold an expanded stack back up when you leave it</strong><small>Switching to a tab outside the stack collapses it again.</small></span>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Clicking a stack’s label</legend>
+        <label class="radio"><input type="radio" name="labelClick" value="expand" /><span>Expands it in place, like Vivaldi’s accordion stacks</span></label>
+        <label class="radio"><input type="radio" name="labelClick" value="collapse" /><span>Collapses it to just the label, like a plain Firefox group</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Links opened from a stacked tab</legend>
+        <label class="radio"><input type="radio" name="newTabs" value="join" /><span>Join the stack, so the counter goes up</span></label>
+        <label class="radio"><input type="radio" name="newTabs" value="beside" /><span>Open as a normal tab beside the stack</span></label>
+      </fieldset>
+    </form>
+
+    <section>
+      <h2>Keyboard shortcuts</h2>
+      <dl id="shortcuts"></dl>
+      <button id="edit-shortcuts" type="button">Change shortcuts…</button>
+      <p id="shortcuts-help" hidden>Open <code>about:addons</code>, click the gear menu and choose Manage Extension Shortcuts.</p>
+    </section>
+
+    <script src="../shared.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

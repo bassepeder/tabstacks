@@ -1,0 +1,82 @@
+/* Catppuccin Latte, or Mocha when macOS is dark, like the rest of the dotfiles. */
+:root {
+  color-scheme: light dark;
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --crust: #dce0e8;
+  --text: #4c4f69;
+  --subtext1: #5c5f77;
+  --subtext0: #6c6f85;
+  --overlay2: #7c7f93;
+  --overlay1: #8c8fa1;
+  --overlay0: #9ca0b0;
+  --surface2: #acb0be;
+  --surface1: #bcc0cc;
+  --surface0: #ccd0da;
+  --blue: #1e66f5;
+  --sky: #04a5e5;
+  --green: #40a02b;
+  --peach: #fe640b;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --yellow: #df8e1d;
+  --lavender: #7287fd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface0: #313244;
+    --blue: #89b4fa;
+    --sky: #89dceb;
+    --green: #a6e3a1;
+    --peach: #fab387;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --yellow: #f9e2af;
+    --lavender: #b4befe;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background: var(--base);
+  color: var(--text);
+  font: 13px/1.35 system-ui, -apple-system, sans-serif;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 18px;
+  padding: 0 4px;
+  border-radius: 4px;
+  background: var(--surface0);
+  color: var(--subtext1);
+  font: inherit;
+  text-align: center;
+}
